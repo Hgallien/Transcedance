@@ -1,0 +1,50 @@
+Note :
+We use the id of the user (represented by an int(number)) to fetch data
+same for the avatar picture
+Object :
+User
+{
+	id: Id ;
+	name:string;
+	//array of id that the user added
+	friendlist: Id[];
+	//id of the avatar of the user, to use on another request
+	avatarId: Id;
+}
+//Object used to pass information between front and back, different fron the User object
+UserDto
+{
+	id: Id;
+	name: string;
+}
+FriendReauestDto
+{
+	sender: Id;
+	target: Id;
+}
+Request:
+//Used to get information
+Get{
+  - localhost:5000/user
+  		return all the User
+  -	localhost:5000/user/*
+  		return the user with id = *
+  -	localhost:5000/avatar/* 
+  		return the image of user with avtarID = *
+}
+//Used to add or update information
+Post
+{
+  - localhost:5000/user
+  		@Body() = UserDto;
+			add a new user with his name specified in the DTO,
+	return the User once created
+
+  - localhost:5000/user/friendReauest
+  		@Body() = FriendRequestDto
+			Add the target to the sender friendlist using only id
+
+  - localhost:5000/user/avatar
+  		need to use the multipart/form-data to send the UserDto and a file
+		@Body() = UserDto and a image with the key 'file'
+}

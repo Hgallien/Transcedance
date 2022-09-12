@@ -1,0 +1,34 @@
+{
+	"name": "transcendence",
+	"version": "0.0.1",
+	"description": "42's Common core end project",
+	"directories": {
+		"doc": "doc"
+	},
+	"scripts": {
+		"install": "(cd front && npm install) && (cd back && npm install) && (cd lib/pong && npm install) && (cd lib/backFrontCommon && npm install)",
+		"format": "(cd front && npm run format) && (cd back && npm run format)",
+		"format:check": "(cd front && npm run format:check) && (cd back && npm run format:check)"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DoomDuck/transcendence.git"
+	},
+	"keywords": [
+		"42",
+		"transcendance",
+		"nestjs",
+		"pong"
+	],
+	"contributors": [
+		"dburgun",
+		"efarin",
+		"hgallien",
+		"lzins"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/DoomDuck/transcendence/issues"
+	},
+	"homepage": "https://github.com/DoomDuck/transcendence#readme"
+}

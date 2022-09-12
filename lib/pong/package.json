@@ -1,0 +1,14 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "author": "el-zins",
+  "license": "ISC",
+  "dependencies": {
+    "backFrontCommon": "file:../backFrontCommon",
+    "chat": "file:../backFrontCommon",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1"
+  }
+}
